@@ -3,7 +3,7 @@ clojure-paypal-ipn
 
 PayPal IPN handler for Clojure. Use with ring, compojure, or any clojure server env.
 
-add this to your `:dependencies` in project.clj
+Add this to your `:dependencies` in project.clj
 ```clojure
 [clojure-paypal-ipn "0.0.1-SNAPSHOT"]
 ```
@@ -16,11 +16,11 @@ Use with ring / compojure
 
 ...
 
-;add this to your defroutes
+;Add this to your defroutes
   (POST "/paypal/ipn" [] (make-ipn-handler
                            (fn [ipn-data]
                              ;ipn-data is a hash map of the paypal ipn data
-                             ;Do your own processing here. Here are some things you aught to check:
+                             ;Here are some things you aught to check:
                              ;  - payment_status is Completed
                              ;  - receiver_id/receiver_email is yours
                              ;  - txn_id has not been previously processed
