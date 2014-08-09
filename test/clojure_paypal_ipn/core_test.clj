@@ -56,7 +56,7 @@
 
 
 (defn mock-ask!-paypal [response]
-  (fn [req]
+  (fn [req sandbox?]
     response))
 
 (deftest test-handle-ipn
